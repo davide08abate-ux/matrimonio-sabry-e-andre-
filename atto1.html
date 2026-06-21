@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#e9e3dc;
+    font-family:'Cormorant Garamond', serif;
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+
+.card{
+    width:100%;
+    max-width:420px;
+    background:#faf7f2;
+    border-radius:30px;
+    padding:25px;
+    position:relative;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.atto{
+    text-align:center;
+    color:#b89b69;
+    font-size:18px;
+    letter-spacing:3px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+h1{
+    text-align:center;
+    color:#4a3020;
+    font-size:48px;
+    font-weight:500;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.dish-container{
+    margin:0;
+    padding:0;
+}
+
+.dish-container img{
+    width:100%;
+    height:auto;
+    display:block;
+    border:none;
+    border-radius:0;
+}
+
+.description{
+    margin-top:25px;
+    text-align:center;
+    color:#4b3a2d;
+    font-size:20px;
+    line-height:1.5;
+    padding:0 10px;
+}
+
+.menu-btn{
+    display:block;
+    margin:30px auto 10px;
+    width:85%;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    font-size:24px;
+    padding:15px;
+    border-radius:50px;
+    background:linear-gradient(
+        180deg,
+        #d9bd8b,
+        #b98b4c
+    );
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.menu-btn:hover{
+    opacity:.95;
+}
+
+.flower-left,
+.flower-right{
+    position:absolute;
+    width:80px;
+    opacity:.35;
+}
+
+.flower-left{
+    bottom:120px;
+    left:5px;
+}
+
+.flower-right{
+    bottom:120px;
+    right:5px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="atto">ATTO I</div>
+
+    <h1>Il Primo Sguardo</h1>
+
+    <!-- QUI INSERIRAI L'IMMAGINE DEL PIATTO -->
+    <div class="dish-container">
+        <<img src="https://drive.google.com/thumbnail?id=1V-wiRyAeTBTqCgcMBJFRk2kDMFuK_nii&sz=w1200" alt="Piatto">
+    </div>
+
+    <div class="description">
+        Il nostro viaggio culinario si apre con
+        <strong>L'inizio di Noi</strong>:
+        un’entrée di finissimo manzo tagliato a coltello,
+        adagiato su un letto di rucola selvatica croccante
+        e impreziosito da scaglie dorate di Grana Padano.
+        È l’antipasto perfetto: leggero, elegante e d’impatto,
+        proprio come il nostro primo appuntamento.
+    </div>
+
+    <!-- PULSANTE MENU -->
+    <a href="home.html" class="menu-btn">
+        Torna al menù
+    </a>
+
+    <!-- DECORAZIONI FLOREALI -->
+    <img src="flower-left.png" class="flower-left" alt="">
+    <img src="flower-right.png" class="flower-right" alt="">
+
+</div>
+
+</body>
+</html>

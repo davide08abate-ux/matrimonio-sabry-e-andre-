@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#f8f4ed;
+font-family:'Montserrat',sans-serif;
+color:#5b4636;
+padding:20px;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+}
+
+.hero{
+text-align:center;
+margin-bottom:40px;
+padding-top:20px;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+color:#a8894d;
+}
+
+.hero p{
+margin-top:10px;
+font-size:1rem;
+color:#7a6a5a;
+}
+
+.card{
+display:block;
+text-decoration:none;
+background:#fffdf9;
+padding:25px;
+margin-bottom:18px;
+border-radius:24px;
+border:1px solid rgba(168,137,77,.25);
+box-shadow:0 8px 20px rgba(0,0,0,.06);
+transition:.3s;
+position:relative;
+overflow:hidden;
+}
+
+.card:hover{
+transform:translateY(-3px);
+}
+
+.card::before{
+content:"◦";
+position:absolute;
+right:18px;
+top:10px;
+font-size:2rem;
+color:#d6c08c;
+}
+
+.card span{
+font-size:.85rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#a8894d;
+}
+
+.card h2{
+margin-top:8px;
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:600;
+color:#5b4636;
+}
+
