@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -11,8 +12,14 @@
 <div class="container">
 
     <div class="hero">
-        <h1>Il Nostro Viaggio</h1>
-        <p>Un percorso gastronomico in cinque atti</p>
+        <h1>Il Nostro Viaggio</h1><br>
+        <h3>(Nota per gli smartphone e per la sopravvivenza:
+        La connessione tiene, ma la riduzione di roastbeef
+        e la fontana di cioccolato non perdonano
+        gli abiti da cerimonia.
+        Mangiate con passione, brindate alla nostra salute.)</h3>
+        <br>
+        <h4>È VIETATO STARE SEDUTI QUANDO PARTONO I BALLI!</h4>
     </div>
 
     <a href="atto1.html" class="card">
@@ -22,12 +29,12 @@
 
     <a href="atto2.html" class="card">
         <span>Atto II</span>
-        <h2>La Promessa tra i Fornelli</h2>
+        <h2>La Promessa</h2>
     </a>
 
     <a href="atto3.html" class="card">
         <span>Atto III</span>
-        <h2>La Pausa di Riflessione</h2>
+        <h2>Attimo di Riflessione</h2>
     </a>
 
     <a href="atto4.html" class="card">
@@ -35,12 +42,88 @@
         <h2>Il Grande Passo</h2>
     </a>
 
-    <a href="atto5.html" class="card">
+    <!-- ATTO V CON PIN -->
+
+    <a href="#" class="card" onclick="apriPin(); return false;">
         <span>Atto V</span>
         <h2>E Vissero Felici e Sazi</h2>
     </a>
 
 </div>
 
+<!-- POPUP PIN -->
+
+<div id="overlay">
+
+    <div id="popup">
+
+        <h2>🔒 Sezione Riservata</h2>
+
+        <p>
+            Prima di accedere a questa parte del menù
+            è necessario inserire il PIN.
+        </p>
+
+        <input
+            type="password"
+            id="pinInput"
+            placeholder="Inserisci PIN">
+
+        <button onclick="controllaPin()">
+            Accedi
+        </button>
+       
+        <button class="close-btn" onclick="chiudiPin()">
+            Torna indietro
+        </button>
+        
+        <div id="errore"></div>
+
+        <small>È una sorpresa 🎉</small>
+
+    </div>
+
+</div>
+
+<script>
+
+const PIN_CORRETTO = "2026";
+
+function apriPin(){
+    document.getElementById("overlay").style.display = "flex";
+}
+
+function controllaPin(){
+
+    const pin =
+        document.getElementById("pinInput").value;
+
+    if(pin === PIN_CORRETTO){
+
+        window.location.href = "atto5.html";
+
+    }else{
+
+        document.getElementById("errore")
+        .innerHTML = "PIN non corretto";
+
+    }
+}
+
+document.getElementById("overlay").addEventListener("click", function(e){
+
+    if(e.target === this){
+        this.style.display = "none";
+    }
+
+});
+    
+    function chiudiPin(){
+    document.getElementById("overlay").style.display = "none";
+    }
+
+</script>
+
 </body>
 </html>
+
